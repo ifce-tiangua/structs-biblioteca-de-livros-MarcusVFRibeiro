@@ -22,6 +22,12 @@ int main()
   int qtde;
   scanf("%d", &qtde);
   getchar();
+  
+  if(qtde <= 0)
+  {
+    printf("Sem livros\n");
+    exit(1);
+  }
 
   pLivro livros = livro_aloc(qtde);
   livro_ler(livros, qtde);
